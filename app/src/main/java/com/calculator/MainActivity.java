@@ -4,19 +4,87 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private TextView textView;
+    private int save = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initButton();
-
+        textView = findViewById(R.id.textView);
     }
     @Override
     public void onClick(View view) {
-
+        switch(view.getId()){
+            case R.id.buttonOne:
+                save = save*10+1;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonTwo:
+                save = save*10+2;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonThree:
+                save = save*10+3;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonFour:
+                save = save*10+4;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonFive:
+                save = save*10+5;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonSix:
+                save = save*10+6;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonSeven:
+                save = save*10+7;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonEight:
+                save = save*10+8;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonNine:
+                save = save*10+9;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonZero:
+                save = save*10;
+                textView.setText(String.valueOf(save));
+                break;
+            case R.id.buttonSum:
+                Toast.makeText(getApplicationContext(), "Ждите суммируем...", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.buttonDif:
+                Toast.makeText(getApplicationContext(), "Ждите вычитаем...", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.buttonCom:
+                Toast.makeText(getApplicationContext(), "Ждите умнажаем...", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.buttonDiv:
+                Toast.makeText(getApplicationContext(), "Ждите делим...", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.buttonEqual:
+                Toast.makeText(getApplicationContext(), "Просто ждите...", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.buttonClear:
+                save = 0;
+                textView.setText(String.valueOf(save));
+                Toast.makeText(getApplicationContext(), "Очищено", Toast.LENGTH_LONG).show();
+                break;
+        }
+        if(save > Integer.MAX_VALUE/100){
+            save = 0;
+            Toast.makeText(getApplicationContext(), "Очищено", Toast.LENGTH_LONG).show();
+        }
     }
     private void initButton() {
         Button buttonOne = findViewById(R.id.buttonOne);
