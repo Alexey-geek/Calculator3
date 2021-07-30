@@ -1,5 +1,6 @@
 package com.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initButton();
         textView = findViewById(R.id.textView);
     }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        instanceState.putSerializable("key" , save);
+    }
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        save = (int)instanceState.getSerializable("key");
+        textView.setText(String.valueOf(save));
+    }
+
     @Override
     public void onClick(View view) {
         switch(view.getId()){
