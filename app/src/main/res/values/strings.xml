@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="textButtonOne">1</string>
+    <string name="textButtonTwo">2</string>
+    <string name="textButtonThree">3</string>
+    <string name="textButtonFour">4</string>
+    <string name="textButtonOneFive">5</string>
+    <string name="textButtonOneSix">6</string>
+    <string name="textButtonSeven">7</string>
+    <string name="textButtonEight">8</string>
+    <string name="textButtonNine">9</string>
+    <string name="textButtonClear">C</string>
+    <string name="textButtonEqual">=</string>
+    <string name="textButtonZero">0</string>
+    <string name="textButtonSum">+</string>
+    <string name="textButtonDif">-</string>
+    <string name="textButtonCom">*</string>
+    <string name="textButtonDiv">/</string>
+    <string name="startTexOfTextView">0</string>
 </resources>

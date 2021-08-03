@@ -2,4 +2,6 @@
 <resources>
     <dimen name="buttonTextSize">40sp</dimen>
     <dimen name="buttonWidth">70sp</dimen>
+    <dimen name="heightOfTextView">50sp</dimen>
+    <dimen name="heightOfButtonEqualAndClear">74sp</dimen>
 </resources>

@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(save > Integer.MAX_VALUE/100){
             save = 0;
+            textView.setText(String.valueOf(save));
             Toast.makeText(getApplicationContext(), "Очищено", Toast.LENGTH_LONG).show();
         }
     }
